@@ -80,12 +80,12 @@
   :bind (("C-x g" . magit-status)
          ("C-x C-g" . magit-status)))
 
-;; (use-package projectile
-;;   :ensure t
-;;   :init
-;;   (projectile-mode +1)
-;;   :bind (:map projectile-mode-map
-;;               ("C-c p" . projectile-command-map)))
+(use-package projectile
+  :ensure t
+  :init
+  (projectile-mode +1)
+  :bind (:map projectile-mode-map
+              ("C-c p" . projectile-command-map)))
 
 ;;; visual stuff
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -118,7 +118,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(flycheck lsp-mode company pyvenv ace-window use-package)))
+ '(package-selected-packages
+   '(projectile flycheck lsp-mode company pyvenv ace-window use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
