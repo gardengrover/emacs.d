@@ -31,7 +31,10 @@
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp)
 
-(use-package lsp-ui :commands lsp-ui-mode)
+(use-package lsp-ui
+  :init
+  (setq lsp-ui-doc-show-with-mouse nil)
+  :commands lsp-ui-mode)
 
 (use-package flycheck
   :ensure t
